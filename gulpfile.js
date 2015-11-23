@@ -2,20 +2,21 @@
 
 // grab our gulp packages
 var gulp  = require('gulp'),
-    gutil = require('gulp-jshint'),
+    // gutil = require('gulp-jshint'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    concat = require('gulp-concat');
     
 // define the default task and add the watch task to it
 gulp.task('default', ['watch']);
 
 // configure the jshint task
-gulp.task('jshint', function() {
-  return gulp.src('source/js/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
-});
+// gulp.task('jshint', function() {
+//   return gulp.src('source/js/**/*.js')
+//     .pipe(jshint())
+//     .pipe(jshint.reporter('jshint-stylish'));
+// });
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
@@ -24,7 +25,8 @@ gulp.task('watch', function() {
         server: "./public/"
     });
     
-    gulp.watch('source/js/**/*.js', ['jshint']);
+    // gulp.watch('source/js/**/*.js', ['jshint', 'scripts']);
+    gulp.watch('source/js/**/*.js', ['concatJS']);
     gulp.watch('source/scss/**/*.scss', ['sass']);    
     gulp.watch(['./public/*.html','./public/assets/css/*.css','./public/assets/js/*.js']).on('change', browserSync.reload);
 });
@@ -39,10 +41,18 @@ gulp.task('browser-sync', function() {
     });
 });
 
-// sass
+//  configure the sass compiler task
 gulp.task('sass', function() {
     gulp.src('source/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('./public/assets/css/'));
+});
+
+// concatinating js files
+ 
+gulp.task('concatJS', function() {
+  return gulp.src('./source/js/*.js')
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('./public/assets/js/'));
 });
