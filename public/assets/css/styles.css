@@ -2075,15 +2075,15 @@ a:hover {
 
 a.btn-round {
   display: inline-block;
-  height: 80px;
-  width: 80px;
-  margin: 10px auto 5px auto;
+  height: 100px;
+  width: 100px;
+  margin: 10px auto 3px auto;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background-color: #333;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #fff;
-  line-height: 80px; }
+  line-height: 100px; }
 
 a.btn-round:hover {
   color: #ffbb66; }
