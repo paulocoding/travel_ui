@@ -159,3 +159,72 @@ a.bg-dblue {
 .menu-pics {
 	padding-top: 5px; 
 }
+
+@media screen and (max-width: 520px) {
+	.panel-social{
+		margin: 0 15%;
+	}
+	$btn-size: 80px;
+	a.btn-round {
+		display: inline-block;
+		height: $btn-size;
+		width: $btn-size;
+		margin: 10px auto 3px auto;
+		border-radius: 50%;
+		background-color: #333;
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: #fff;
+		line-height: $btn-size;
+		&:hover{
+			color: #ffbb66;		
+		}
+	}
+	a.bg-green {
+		background-color: #55a78c;
+	}
+	a.bg-blue {
+		background-color: #579aa8;
+	}
+	a.bg-dblue {
+		background-color: #5769a9;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	h1 {
+		margin: 10px;
+		line-height: 1em;
+		font-size: 2.2rem;
+		color: #fff;
+		text-shadow: 0px 2px 6px $bg-color;
+	}
+	.panel-social{
+		margin: 0 10%;
+	}
+	$btn-size: 70px;
+	a.btn-round {
+		display: inline-block;
+		height: $btn-size;
+		width: $btn-size;
+		margin: 10px auto 3px auto;
+		border-radius: 50%;
+		background-color: #333;
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: #fff;
+		line-height: $btn-size;
+		&:hover{
+			color: #ffbb66;		
+		}
+	}
+	a.bg-green {
+		background-color: #55a78c;
+	}
+	a.bg-blue {
+		background-color: #579aa8;
+	}
+	a.bg-dblue {
+		background-color: #5769a9;
+	}
+}
