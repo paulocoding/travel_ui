@@ -33,7 +33,7 @@ h3 {
 }
 
 a, a:visited {
-	color: #2699ee;
+	color: #dfdfdf;
 }
 
 a:hover {
@@ -43,10 +43,8 @@ a:hover {
 .container {
 	display: block;
 	margin: 0 auto;
-	max-width: 600px;
+	max-width: 680px;
 	text-align: center;
-	// for debug only
-	border: 2px solid $bg-color;
 }
 
 .usr-avatar {
@@ -59,10 +57,11 @@ a:hover {
 
 .top-btn {
 	font-size: 3rem;
+	padding: 0 25px;
 	color: #DDD;
-}
-.top-btn:hover {
-	color: #ffbb66;
+	&:hover {
+		color: #ffbb66;
+	}
 }
 .f-right {
 	float: right;
@@ -80,12 +79,14 @@ a.btn-round {
 	border-radius: 50%;
 	background-color: #333;
 	font-size: 1.6rem;
+	font-weight: 700;
 	color: #fff;
 	line-height: $btn-size;
+	&:hover{
+		color: #ffbb66;		
+	}
 }
-a.btn-round:hover {
-	color: #ffbb66;	
-}
+
 a.bg-green {
 	background-color: #55a78c;
 }
@@ -109,8 +110,52 @@ a.bg-dblue {
 
 .label {
 	display: block;
-	color: #dfdfdf;
+	font-weight: 800;
+	&:hover {
+		color: #ffbb66;
+	}
 }
-.label:hover {
-	color: #ffbb66;
+
+.pics{
+	display: inline;
+	.row {
+		padding: 0;
+		// clearfix:
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		a {
+			color: #dfdfdf;
+			&:hover {
+				color: #ffbb66;				
+			}
+		}
+		.col-2 {
+			display: block;
+			float: left;
+			width: 46%;
+			margin: 0 2%;
+			padding: 0;
+			p {
+				margin: 0;
+				padding: 0;
+				text-align: left;
+				font-weight: 600;
+				position: relative;
+				top: 22px;
+				left: 2px;
+			}
+			img {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.menu-pics {
+	padding-top: 5px; 
 }

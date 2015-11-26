@@ -1,17 +1,9 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Lato Regular"), local("Lato-Regular"), url(http://fonts.gstatic.com/s/lato/v11/UyBMtLsHKBKXelqf4x7VRQ.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
-
 /* latin */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Quicksand';
   font-style: normal;
   font-weight: 400;
-  src: local("Lato Regular"), local("Lato-Regular"), url(http://fonts.gstatic.com/s/lato/v11/1YwB1sO8YE1Lyjf12WNiUA.woff2) format("woff2");
+  src: local("Quicksand Regular"), local("Quicksand-Regular"), url(https://fonts.gstatic.com/s/quicksand/v5/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
 /*!
@@ -1999,11 +1991,12 @@
   content: "\f295"; }
 
 * {
+  font-family: 'Quicksand';
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-size: 16px;
-  line-height: 1.6em; }
+  line-height: 1.4em; }
 
 body {
   background-color: #293134;
@@ -2039,7 +2032,7 @@ h3 {
   font-size: 1.5rem; }
 
 a, a:visited {
-  color: #2699ee; }
+  color: #dfdfdf; }
 
 a:hover {
   color: #ee9933; }
@@ -2047,9 +2040,8 @@ a:hover {
 .container {
   display: block;
   margin: 0 auto;
-  max-width: 600px;
-  text-align: center;
-  border: 2px solid #293134; }
+  max-width: 680px;
+  text-align: center; }
 
 .usr-avatar {
   display: block;
@@ -2062,10 +2054,10 @@ a:hover {
 
 .top-btn {
   font-size: 3rem;
+  padding: 0 25px;
   color: #DDD; }
-
-.top-btn:hover {
-  color: #ffbb66; }
+  .top-btn:hover {
+    color: #ffbb66; }
 
 .f-right {
   float: right; }
@@ -2082,11 +2074,11 @@ a.btn-round {
           border-radius: 50%;
   background-color: #333;
   font-size: 1.6rem;
+  font-weight: 700;
   color: #fff;
   line-height: 100px; }
-
-a.btn-round:hover {
-  color: #ffbb66; }
+  a.btn-round:hover {
+    color: #ffbb66; }
 
 a.bg-green {
   background-color: #55a78c; }
@@ -2108,7 +2100,40 @@ a.bg-dblue {
 
 .label {
   display: block;
-  color: #dfdfdf; }
+  font-weight: 800; }
+  .label:hover {
+    color: #ffbb66; }
 
-.label:hover {
-  color: #ffbb66; }
+.pics {
+  display: inline; }
+  .pics .row {
+    padding: 0; }
+    .pics .row:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .pics .row a {
+      color: #dfdfdf; }
+      .pics .row a:hover {
+        color: #ffbb66; }
+    .pics .row .col-2 {
+      display: block;
+      float: left;
+      width: 46%;
+      margin: 0 2%;
+      padding: 0; }
+      .pics .row .col-2 p {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        font-weight: 600;
+        position: relative;
+        top: 22px;
+        left: 2px; }
+      .pics .row .col-2 img {
+        margin: 0;
+        padding: 0;
+        width: 100%; }
+
+.menu-pics {
+  padding-top: 5px; }
