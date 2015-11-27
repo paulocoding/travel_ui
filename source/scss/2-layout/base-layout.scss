@@ -117,7 +117,7 @@ a.bg-dblue {
 }
 
 .pics{
-	display: inline;
+	display: none;
 	.row {
 		padding: 0;
 		// clearfix:
@@ -154,6 +154,10 @@ a.bg-dblue {
 			}
 		}
 	}
+}
+
+.active-pics {
+	display: block;
 }
 
 .menu-pics {

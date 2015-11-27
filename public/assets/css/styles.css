@@ -2105,7 +2105,7 @@ a.bg-dblue {
     color: #ffbb66; }
 
 .pics {
-  display: inline; }
+  display: none; }
   .pics .row {
     padding: 0; }
     .pics .row:after {
@@ -2134,6 +2134,9 @@ a.bg-dblue {
         margin: 0;
         padding: 0;
         width: 100%; }
+
+.active-pics {
+  display: block; }
 
 .menu-pics {
   padding-top: 5px; }
